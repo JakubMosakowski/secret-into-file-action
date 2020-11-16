@@ -1,0 +1,18 @@
+name: 'Secret into file action'
+description: 'Action that decrypts github secret into file.'
+inputs:
+  secret:
+    description: 'Secret to be decrypted'
+    required: true
+  passphrase:
+    description: 'Passphrase needed for file decryption'
+    required: true
+  filename:
+    description: 'Name of output file'
+    required: true
+runs:
+  using: 'node12'
+  main: 'src/index.js'
+branding:
+  icon: 'download'
+  color: 'purple'
